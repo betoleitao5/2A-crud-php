@@ -16,16 +16,24 @@ include_once './_header.php';
         <th>Cor</th>
         <th colspan="2">Ações</th>
     </tr>
+<?php
+// consulta no banco
+$sql = "SELECT * FROM setor;";
+$resultado = mysqli_query($conexao,$sql);
 
+while ($row = mysqli_fetch_array($resultado) ) {
+?>
     <tr>
         <td>xx</td>
-        <td>yy</td>
+        <td><?php echo $row['Nome'];?></td>
         <td>ww</td>
         <td>gg</td>
         <td><a href="./setor-salvar.php">atualizar</a></td>
         <td><a href="./setor-excluir.php">excluir</a></td>
     </tr>
-
+<?php
+}
+?>
 </table>
 <?php
 // footer
