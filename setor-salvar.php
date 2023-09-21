@@ -1,12 +1,9 @@
 <?php
-// inclusao de arquivos base
 include_once './_conexao.php';
 include_once './_header.php';
 
-// validacao do conteudo
 $id = isset( $_GET['id']) ? $_GET['id'] : '';
 
-// valida a existencia do erro
 if( !empty($id) ){
 
     $id = $_GET['id'];
